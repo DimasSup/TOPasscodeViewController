@@ -147,6 +147,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)setContentHidden:(BOOL)hidden animated:(BOOL)animated;
 
+- (void)accessoryButtonTapped:(id)sender;
+-(void)completePasscode;
 @end
 
 NS_ASSUME_NONNULL_END

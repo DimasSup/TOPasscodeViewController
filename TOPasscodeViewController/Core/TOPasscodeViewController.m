@@ -461,17 +461,20 @@
         [self.passcodeView resetPasscodeAnimated:YES playImpact:YES];
         return;
     }
-
-    // Hang onto the fact the passcode was successful to play a nicer dismissal animation
-    self.passcodeSuccess = YES;
-
-    // Perform handler if correctly entered
-    if ([self.delegate respondsToSelector:@selector(didInputCorrectPasscodeInPasscodeViewController:)]) {
-        [self.delegate didInputCorrectPasscodeInPasscodeViewController:self];
-    }
-    else {
-        [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-    }
+	[self completePasscode];
+	
+}
+-(void)completePasscode{
+	// Hang onto the fact the passcode was successful to play a nicer dismissal animation
+	self.passcodeSuccess = YES;
+	
+	// Perform handler if correctly entered
+	if ([self.delegate respondsToSelector:@selector(didInputCorrectPasscodeInPasscodeViewController:)]) {
+		[self.delegate didInputCorrectPasscodeInPasscodeViewController:self];
+	}
+	else {
+		[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+	}
 }
 
 #pragma mark - Keyboard Handling -
