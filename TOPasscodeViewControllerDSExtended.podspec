@@ -13,10 +13,10 @@ Pod::Spec.new do |s|
    core.source_files   = 'TOPasscodeViewController/{Core}/**/*'
    core.public_header_files = 'TOPasscodeViewController/{Core}/**/*.h'
   end
-  s.subspec 'Biomentrical' do |fmdb|
-   fmdb.source_files   = 'TOPasscodeViewController/Biomentrical/**/*'
-   fmdb.public_header_files = 'TOPasscodeViewController/Biomentrical/**/*.h'
+  s.subspec 'Biometrical' do |biometrical|
+   biometrical.source_files   = 'TOPasscodeViewController/Biometrical/**/*'
+   biometrical.public_header_files = 'TOPasscodeViewController/Biometrical/**/*.h'
 
-   fmdb.dependency 'TOPasscodeViewControllerDSExtended/Core'
+   biometrical.dependency 'TOPasscodeViewControllerDSExtended/Core'
   end
 end
