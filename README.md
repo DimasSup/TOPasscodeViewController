@@ -114,6 +114,10 @@ Since the default style and text for this view controller make it very easily co
 
 All in all, this might still not be enough. If you do end up getting rejected by Apple for using this library, please file an issue here and we can look at what will need to be changed to let Apple approve it.
 
+## CHANGES
+* Added UI_APPEARANCE_SELECTOR support for TOPasscodeView.titleText
+* Added logic that update UI when TOPasscodeView.titleText update
+
 ## Credits
 `TOPasscodeViewController` was originally created by [Tim Oliver](http://twitter.com/TimOliverAU) as a component for [iComics](http://icomics.co), a comic reader app for iOS.
 
@@ -121,3 +125,5 @@ iOS Device mockups used in the screenshot created by [Pixeden](http://pixeden.co
 
 ## License
 `TOPasscodeViewController` is licensed under the MIT License, please see the [LICENSE](LICENSE) file. ![analytics](https://ga-beacon.appspot.com/UA-5643664-16/TOPasscodeViewController/README.md?pixel)
+
+
