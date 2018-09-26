@@ -316,8 +316,17 @@
         [self verticalSizeToFit];
     }
 }
-
+-(void)setTitleText:(NSString *)titleText{
+	if(_titleText!=titleText){
+		_titleText = titleText;
+		self.titleLabel.text = _titleText;
+		self.titleLabel.frame = CGRectZero;
+		[self.titleLabel sizeToFit];
+		[self setNeedsLayout];
+	}
+}
 #pragma mark - View Setup -
+
 - (void)setUpViewForType:(TOPasscodeType)type
 {
     __weak typeof(self) weakSelf = self;

@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL horizontalLayout;
 
 /* The text in the title view (Default is 'Enter Passcode') */
-@property (nonatomic, copy) NSString *titleText;
+@property (nonatomic, copy) NSString *titleText UI_APPEARANCE_SELECTOR;
 
 /* Customizable Accessory Views */
 @property (nonatomic, strong, nullable) UIView   *titleView;

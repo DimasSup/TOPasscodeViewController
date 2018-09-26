@@ -47,10 +47,14 @@
 
 - (IBAction)showButtonTapped:(id)sender
 {
+	
+	[TOPasscodeView appearance].titleText = @"Hello Passcode";
+	
     TOPasscodeViewController *passcodeViewController = [[TOPasscodeViewController alloc] initWithStyle:self.style passcodeType:self.type];
     passcodeViewController.delegate = self;
     passcodeViewController.allowBiometricValidation = self.biometricsAvailable;
     passcodeViewController.biometryType = self.faceIDAvailable ? TOPasscodeBiometryTypeFaceID : TOPasscodeBiometryTypeTouchID;
+
     [self presentViewController:passcodeViewController animated:YES completion:nil];
 }
 
